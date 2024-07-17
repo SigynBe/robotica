@@ -33,7 +33,7 @@ class RoboConstrucao(Robo):
         return direcoes.get(direcao, 'Direção inválida')
 
     def realizar_tarefa(self):
-        return ''  # Erro: retornando uma string vazia
+        return 'Robo de construção está construindo uma estrutura'
 
 # Exemplo de uso
 if __name__ == '__main__':
@@ -43,4 +43,4 @@ if __name__ == '__main__':
 
     construcao = RoboConstrucao()
     print(construcao.mover('direita'))  # Saída: Robo de construção movendo para a direita
-    print(construcao.realizar_tarefa())  # Saída: ''
+    print(construcao.realizar_tarefa())  # Saída: Robo de construção está construindo uma estrutura
