@@ -17,8 +17,7 @@ class RoboLimpeza(Robo):
             'esquerda': 'Robo de limpeza movendo para a esquerda',
             'direita': 'Robo de limpeza movendo para a direita'
         }
-        # Introduzir um erro de sintaxe aqui propositalmente
-        return direcoes.get(direcao, 'Direção inválida'
+        return direcoes.get(direcao, 'Direção inválida')
 
     def realizar_tarefa(self):
         return 'Robo de limpeza está limpando a área'
@@ -31,18 +30,17 @@ class RoboConstrucao(Robo):
             'esquerda': 'Robo de construção movendo para a esquerda',
             'direita': 'Robo de construção movendo para a direita'
         }
-        # Introduzir um erro de sintaxe aqui propositalmente
-        return direcoes.get(direcao, 'Direção inválida'
+        return direcoes.get(direcao, 'Direção inválida')
 
     def realizar_tarefa(self):
-        return 'Robo de construção está construindo uma estrutura'
+        return ''  # Erro: retornando uma string vazia
 
 # Exemplo de uso
 if __name__ == '__main__':
     limpeza = RoboLimpeza()
-    print(limpeza.mover('frente'))  # Saída esperada: Erro de sintaxe durante a compilação
-    print(limpeza.realizar_tarefa())
+    print(limpeza.mover('frente'))  # Saída: Robo de limpeza movendo para frente
+    print(limpeza.realizar_tarefa())  # Saída: Robo de limpeza está limpando a área
 
     construcao = RoboConstrucao()
-    print(construcao.mover('direita'))  # Saída esperada: Erro de sintaxe durante a compilação
-    print(construcao.realizar_tarefa())
+    print(construcao.mover('direita'))  # Saída: Robo de construção movendo para a direita
+    print(construcao.realizar_tarefa())  # Saída: ''
